@@ -1,19 +1,27 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-// prendo solo la proprietà post
-const PostCard = ({ post }) => {
+// prendo solo la proprietà post e handleDelete
+const PostCard = ({ post, handleDelete }) => {
+
+    console.log(post);
 
     return (
 
-        <div className="post-card">
+        <li key={post.id}>
 
             <h3>{post.title}</h3>
             <p>{post.content}</p>
-            <p><strong>Categoria:</strong> {post.tags ? post.tags.join(', ') : 'Nessuna categoria'}</p>
-            {/* Se disponibile, puoi anche mostrare un'immagine */}
-            {post.image && <img src={post.image} alt={post.title} />}
 
-        </div>
+            {/* Verifico che l'immagine esista prima di renderizzarla */}
+            {post.image && <img src={post.image} alt={post.title} />}
+            <p>{post.tags ? post.tags.join(', ') : 'Nessun tag disponibile'}</p>
+            <button onClick={() => handleDelete(post.id)}>Elimina</button>
+
+            {/* Aggiungi il link ai dettagli del post */}
+            <Link to={`/posts/${post.id}`}>Dettagli</Link>
+
+        </li>
 
     );
 
