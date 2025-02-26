@@ -6,6 +6,12 @@ const PostsList = ({ posts, setPosts }) => {
 
     const handleDelete = (id) => {
 
+        if (!Array.isArray(posts)) {
+
+            return <p>Caricamento articoli...</p>;
+
+        }
+
         axios.delete(`http://localhost:3000/posts/${id}`)
 
             .then(() => {

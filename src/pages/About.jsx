@@ -1,18 +1,18 @@
-import React from 'react';
+// import React from 'react';
 
-const About = () => {
+// const About = () => {
 
-    return (
+//     return (
 
-        <div>
+//         <div>
 
-            <h1>Chi Siamo</h1>
-            <p>Questi siamo noi.</p>
+//             <h1>Chi Siamo</h1>
+//             <p>Questi siamo noi.</p>
 
-        </div>
+//         </div>
 
-    );
+//     );
 
-}
+// }
 
-export default About;  
+// export default About;  
