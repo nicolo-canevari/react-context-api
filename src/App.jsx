@@ -13,6 +13,7 @@ const App = () => {
 
   return (
 
+    // wrappa l'intera applicazione
     <PostProvider>
 
       <Router>
