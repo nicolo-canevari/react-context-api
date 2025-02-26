@@ -1,0 +1,49 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+// layout che include il navbar
+import Layout from "../src/layouts/Layout";
+// pagina home
+import Home from "../src/pages/Home";
+// pagina chi siamo
+import About from "../src/pages/About";
+// importo PostList
+import PostsList from './components/PostsList';
+// importo ArticleDetail
+import ArticleDetail from "./pages/ArticleDetail";
+import './App.css'
+
+const App = () => {
+
+  return (
+
+    <Router>
+
+      <Layout>
+
+        <Routes>
+
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/articles" element={<PostsList />} />
+          <Route path="/articles/:id" element={<ArticleDetail />} />
+
+        </Routes>
+
+      </Layout>
+
+    </Router>
+
+    // <div>
+
+    //   <h1>Lista degli Articoli</h1>
+    //   <ArticleList />
+
+    // </div>
+
+  );
+
+};
+
+export default App
+
+
+
