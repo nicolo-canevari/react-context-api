@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
 
@@ -6,8 +7,9 @@ const Home = () => {
 
         <div>
 
-            <h1>Benvenuto nella Homepage!</h1>
-            <p>Questa è la Home principale del nostro sito.</p>
+            <h1>Benvenuto nel Blog</h1>
+            <p>Visita la lista degli articoli:</p>
+            <Link to="/posts">Vai ai post</Link>
 
         </div>
 
