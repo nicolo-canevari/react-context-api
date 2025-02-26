@@ -1,5 +1,6 @@
 import React from 'react';
 
+// prendo solo la proprietà post
 const PostCard = ({ post }) => {
 
     return (
