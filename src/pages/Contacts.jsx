@@ -8,8 +8,8 @@ const Contacts = () => {
         <div>
 
             <h1>Contatti</h1>
-            <p>Se desideri entrare in contatto con noi, puoi scrivere un'email a: <strong>info@nostroblog.com</strong></p>
-            <Link to="/contacts">Contacts</Link>
+            <p>Se desideri entrare in contatto con noi, puoi scrivere un'email a:</p>
+            <Link to="/contacts">Contact us</Link>
 
         </div>
 

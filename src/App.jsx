@@ -10,6 +10,8 @@ import Home from './pages/Home';
 import About from './pages/About';
 // Pagina "Contacts"
 import Contacts from './pages/Contacts';
+// "Dettagli" del post
+import PostDetail from './pages/PostDetail';
 // css
 import './App.css'
 
@@ -54,6 +56,9 @@ const App = () => {
           <Route path="/posts" element={<PostsPage />} />
           <Route path="/about" element={<About />} />
           <Route path="/contacts" element={<Contacts />} />
+
+          {/* rotta per visualizzare i dettagli di un post */}
+          <Route path="/posts/:id" element={<PostDetail />} />
 
         </Routes>
 

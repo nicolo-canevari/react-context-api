@@ -32,7 +32,7 @@ const PostsList = ({ posts, setPosts }) => {
 
     return (
 
-        <ul className='articoli_list'>
+        <ul className='post_list'>
 
             {posts.map(post => (
 
@@ -43,7 +43,9 @@ const PostsList = ({ posts, setPosts }) => {
                     <img src={post.image} alt={post.title} />
                     <p>{post.tags ? post.tags.join(', ') : 'Nessun tag disponibile'}</p>
                     <button onClick={() => handleDelete(post.id)}>Elimina</button>
-                    <Link to={`/articles/${post.id}`}>Dettagli</Link>
+
+                    {/* Aggiungo il link ai dettagli del post */}
+                    <Link to={`/post/${post.id}`}>Dettagli</Link>
 
                 </li>
 
